@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/jquery.min.js"></script>
+
+    <script src="socket.io/socket.io.js"></script>
+    <script src="js/main.js"></script>
+    <title>Chat</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="firstChat" >
+            <label class="label-firchat" for="fullname"> Nhập tên của bạn để bắt đầu chát</label>
+            <input name="fullname" class="inputStyle" id="fullname" placeholder="Nhập tên của bạn" />
+            <input type="hidden" id="yourIp" value="<%= yourIp %>" />
+            <input type="hidden" id="masterName" value="phamsinh" />
+            
+            <button type="button" id="startChat" class="btnStyle">Bắt đầu chát</button>
+        </div>
+        <div id="secordChat" style="display: none">
+            <ul id="msgList">
+
+            </ul>
+            <form class="form-inline" id="formsendmsg">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="txtMessage" placeholder="Nhập message">
+                    <input type="hidden" id="roomID" value="">
+                </div>
+                <button type="submit" id="btnSend" class="btn btn-default">Gửi</button>
+            </form>
+            
+        </div>
+    </div>
+    
+</body>
+</html>
