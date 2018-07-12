@@ -64,7 +64,7 @@ io.on("connection",function(socket){
             'created' : new Date().getTime()
         }
         usersRef.push(dataInsert);
-        
+        // chat insert to database
         io.sockets.in(data.roomName).emit("chat-message", data.msg);
     })
     
